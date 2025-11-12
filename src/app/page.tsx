@@ -2,7 +2,10 @@ import Banner from "@/components/Banner";
 import Image from "next/image";
 import truckLogo from "../assets/images/truckLogo.jpg";
 import customclearance from "../assets/images/CustomClearance.png";
-
+import Aboutus from "@/components/AboutUs";
+import Service from "@/components/Service";
+import BlogPost from "@/components/BlogPost";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className=" font-sans items-center bg-[#F5F5F5]">
@@ -166,6 +169,10 @@ export default function Home() {
           </div>
           <div className=" w-[45%] h-100">Image</div>
         </div>
+         <Aboutus />
+         <Service />
+         <BlogPost />
+         <Footer />
       </main>
     </div>
   );
