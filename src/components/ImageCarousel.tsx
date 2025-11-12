@@ -7,17 +7,25 @@ import Image from "next/image";
 
 const slideData = [
   {
-    title: "Heavy Machinery Transport",
-    description: "Reliable and safe transportation for your heavy equipment.",
+    title: "Nationwide Trucking",
+    description: "Reliable inter-city and inter-island land transport for your cargo."
   },
   {
-    title: "Global Air Freight",
-    description: "Fast and efficient air freight solutions across the globe.",
+    title: "Hassle-Free Customs Clearance",
+    description: "Efficient and professional customs processing to keep your shipments moving."
   },
   {
-    title: "Secure Warehouse Storage",
-    description: "Your goods are safe in our state-of-the-art warehouses.",
+    title: "Global Freight Forwarding",
+    description: "Complete management of your sea, air, and land shipments worldwide."
   },
+  {
+    title: "Flexible Container Rental",
+    description: "Various container sizes available for your specific transport or storage needs."
+  },
+  {
+    title: "Secure Warehousing",
+    description: "Modern facilities for safe storage, inventory management, and distribution."
+  }
 ];
 
 interface ImageCarouselProps {
