@@ -10,17 +10,17 @@ interface BannerProps {
 
 const Banner = ({ className, onWatchVideoClick }: BannerProps) => {
   const carouselImages = [
-    "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=1974&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=1974&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=1974&auto=format&fit=crop",
+    "https://media.istockphoto.com/photos/logistics-import-export-background-of-container-truck-at-the-dock-picture-id820349442?k=6&m=820349442&s=170667a&w=0&h=q-c43IrJkQtQ_hQpFrVXBHqspP9Bq7MXDyTGWMJozOk=",
+    "https://seaaero.co.th/wp-content/uploads/2018/10/clearance.jpg",
+    "https://www.agi.global/wp-content/uploads/2023/07/transportation-logistics-container-cargo-ship-cargo-plane-3d-rendering-illustration-scaled-e1689091314810.jpg",
+    "https://www.sbbit.jp/article/image/57184/OGP_bit202104151118330394.jpg",
+    "https://static.vecteezy.com/system/resources/previews/027/644/876/large_2x/large-automated-warehouse-logistics-center-for-the-delivery-and-storage-of-goods-ai-generated-free-photo.jpg",
   ];
 
   return (
     <div
       className={`w-full h-fit
-        /* Mobile: Tampilan tumpukan vertikal dengan padding kecil */
         flex flex-col gap-8 py-6 px-6
-        /* Desktop (lg): Tampilan berdampingan dengan padding besar */
         lg:flex-row lg:justify-between lg:gap-0 lg:py-4 lg:px-12
         ${className || ""}`}
     >
@@ -78,7 +78,7 @@ const Banner = ({ className, onWatchVideoClick }: BannerProps) => {
       <div
         className="w-full lg:w-[49%] relative 
                    order-1 lg:order-2 
-                   h-[300px] md:h-[400px] lg:h-[600px]" 
+                   h-[300px] md:h-[400px] lg:h-[600px]"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-400 rounded-2xl transform rotate-3"></div>
         <div className="relative h-full rounded-2xl overflow-hidden shadow-2xl">

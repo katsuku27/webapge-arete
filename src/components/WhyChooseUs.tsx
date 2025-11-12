@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl transform -rotate-3"></div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1758524572081-5a84e02768ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwdGVjaG5vbG9neSUyMGlubm9jYXRpb258ZW58MXx8fHwxNzYyMjQxNzM3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="https://comitranz.com.my/wp-content/uploads/2019/01/trucks.jpg"
                 alt="Digital technology innovation"
                 width={1080}
                 height={720}
