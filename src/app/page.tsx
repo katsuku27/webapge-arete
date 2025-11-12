@@ -1,80 +1,84 @@
 "use client";
 
+import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
-import Image from "next/image";
-import truckLogo from "../assets/images/truckLogo.jpg";
-import customclearance from "../assets/images/CustomClearance.png";
 import Aboutus from "@/components/AboutUs";
 import BlogPost from "@/components/BlogPost";
 import Footer from "@/components/Footer";
 import Services from "@/components/Services";
+import Service from "@/components/Service";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import VideoModal from "@/components/VideoModal";
 
 export default function Home() {
+  const homeRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const whyChooseUsRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const blogPostRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const handleScrollToHome = () => {
+    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleScrollToServices = () => {
+    servicesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleScrollToWhyChooseUs = () => {
+    // <-- BARU
+    whyChooseUsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleScrollToAbout = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleScrollToBlogPost = () => {
+    // <-- BARU
+    blogPostRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleScrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const videoUrl = "https://www.youtube.com/embed/aVe0LvookTM?autoplay=1";
 
   return (
     <>
+      <Navbar
+        onHomeClick={handleScrollToHome}
+        onServicesClick={handleScrollToServices}
+        onWhyChooseUsClick={handleScrollToWhyChooseUs} // <-- BARU
+        onAboutClick={handleScrollToAbout}
+        onBlogClick={handleScrollToBlogPost} // <-- BARU
+        onContactClick={handleScrollToContact}
+      />
       <div className=" font-sans items-center bg-[#F5F5F5] space-y-24">
-        <Banner onWatchVideoClick={() => setIsModalOpen(true)} />
-        <Services />
-        <WhyChooseUs />
-      </div>
-
-        <div className="flex justify-between w-full h-fit">
-          <div className="flex flex-col w-[55%] gap-4 p-6 justify-end">
-            <div className="">
-              <div className="flex">
-                <div className="material-symbols-outlined">icon</div>
-                <div>
-                  <div>Why choose us</div>
-                  <div>
-                    Professional logistics experts dedicated to your success.
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>icon</div>
-                <div>
-                  <div>Reliable service</div>
-                  <div>
-                    Consistent and dependable transportation solutions that meet
-                    your business requirements.
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>icon</div>
-                <div>
-                  <div>Competitive pricing</div>
-                  <div>
-                    Cost-effective logistics services without compromising on
-                    quality and efficiency.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>Learn More</div>
-              <div>Get Quote</div>
-            </div>
-          </div>
-          <div className=" w-[45%] h-100">Image</div>
+        <div ref={homeRef}>
+          <Banner
+            onWatchVideoClick={() => setIsModalOpen(true)}
+            onServicesClick={handleScrollToServices}
+          />
         </div>
-         <Aboutus />
-         <Service />
-         <BlogPost />
-         <Footer />
-      </main>
-    </div>
+        <div ref={servicesRef}>
+          <Services />
+        </div>
+        <div ref={whyChooseUsRef}> {/* <-- BARU */}
+          <WhyChooseUs />
+        </div>
+        <div ref={aboutRef}>
+          <Aboutus />
+        </div>
+        <Service /> 
+        <div ref={blogPostRef}> {/* <-- BARU */}
+          <BlogPost />
+        </div>
+        <div ref={contactRef}>
+          <Footer />
+        </div>
+      </div>
       {isModalOpen && (
-        <VideoModal
-          videoUrl={videoUrl}
-          onClose={() => setIsModalOpen(false)}
-        />
+        <VideoModal videoUrl={videoUrl} onClose={() => setIsModalOpen(false)} />
       )}
     </>
   );
