@@ -6,9 +6,14 @@ import { ArrowRight, CirclePlay } from "lucide-react";
 interface BannerProps {
   className?: string;
   onWatchVideoClick: () => void;
+  onServicesClick: () => void;
 }
 
-const Banner = ({ className, onWatchVideoClick }: BannerProps) => {
+const Banner = ({
+  className,
+  onWatchVideoClick,
+  onServicesClick,
+}: BannerProps) => {
   const carouselImages = [
     "https://media.istockphoto.com/photos/logistics-import-export-background-of-container-truck-at-the-dock-picture-id820349442?k=6&m=820349442&s=170667a&w=0&h=q-c43IrJkQtQ_hQpFrVXBHqspP9Bq7MXDyTGWMJozOk=",
     "https://seaaero.co.th/wp-content/uploads/2018/10/clearance.jpg",
@@ -46,7 +51,10 @@ const Banner = ({ className, onWatchVideoClick }: BannerProps) => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="group inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors h-10 px-6 rounded-md bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">
+          <button
+            onClick={onServicesClick}
+            className="group inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors h-10 px-6 rounded-md bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50"
+          >
             Services
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </button>
