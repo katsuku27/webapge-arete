@@ -1,5 +1,6 @@
 import { Award, ShieldCheck, DollarSign } from "lucide-react";
 import Image from "next/image";
+import Warehouse from "../assets/images/warehouse2.jpg";
 
 const FeatureItem = ({
   icon,
@@ -34,7 +35,7 @@ const WhyChooseUs = () => {
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl transform -rotate-3"></div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="https://comitranz.com.my/wp-content/uploads/2019/01/trucks.jpg"
+                src={Warehouse}
                 alt="Digital technology innovation"
                 width={1080}
                 height={720}
