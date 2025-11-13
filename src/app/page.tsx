@@ -10,6 +10,7 @@ import Service from "@/components/Service";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { useState, useRef } from "react";
 import VideoModal from "@/components/VideoModal";
+import OurTeams from "@/components/OurTeams";
 
 export default function Home() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -18,6 +19,7 @@ export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const blogPostRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const ourTeamsRef = useRef<HTMLDivElement>(null);
 
   const handleScrollToHome = () => {
     homeRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -39,6 +41,9 @@ export default function Home() {
   const handleScrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+  const handleScrollToOurTeams = () => {
+    ourTeamsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const videoUrl = "https://www.youtube.com/embed/aVe0LvookTM?autoplay=1";
@@ -52,6 +57,7 @@ export default function Home() {
         onAboutClick={handleScrollToAbout}
         onBlogClick={handleScrollToBlogPost} // <-- BARU
         onContactClick={handleScrollToContact}
+        onOurTeamsClick={handleScrollToOurTeams} // <-- BARU
       />
       <div className=" font-sans items-center bg-[#F5F5F5] space-y-24">
         <div ref={homeRef}>
@@ -68,6 +74,9 @@ export default function Home() {
         </div>
         <div ref={aboutRef}>
           <Aboutus />
+        </div>
+        <div ref={ourTeamsRef}> {/* <-- BARU */}
+          <OurTeams />
         </div>
         <Service /> 
         <div ref={blogPostRef}> {/* <-- BARU */}

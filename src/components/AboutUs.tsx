@@ -13,19 +13,18 @@ const AboutUs = () => {
           <div className="space-y-8">
             <div>
               <span className="text-blue-600 text-sm font-semibold">
-                Tentang Kami
+                about us
               </span>
               <h2 className="mt-4 text-3xl lg:text-4xl font-bold text-gray-900">
-                Bersama Mengembangkan Bisnis Anda
+                Growing Your Business Together
               </h2>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Didirikan pada tahun 2010, kami terus berinovasi untuk
-                memberikan solusi terbaik bagi perusahaan. Misi kami adalah
-                membantu perusahaan Indonesia berkembang secara berkelanjutan
-                dan bersaing di pasar internasional.
+                Established in 2010, we continue to innovate to provide the best
+                solutions for companies. Our mission is to help Indonesian
+                companies grow sustainably and compete in the international
+                market.
               </p>
             </div>
-
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
@@ -128,7 +127,7 @@ const AboutUs = () => {
           <div className="lg:h-[600px]">
             <div className="h-full rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000"
+                src="https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763018011/arete/WhatsApp_Image_2025-11-13_at_14.13.08_ac2j17.jpg"
                 alt="Business Meeting"
                 className="w-full h-full object-cover"
               />
