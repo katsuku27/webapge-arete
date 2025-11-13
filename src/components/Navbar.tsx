@@ -12,6 +12,7 @@ interface NavbarProps {
   onWhyChooseUsClick?: () => void; // <-- BARU
   onBlogClick?: () => void; // <-- BARU
   onContactClick?: () => void;
+  onOurTeamsClick?: () => void; // <-- BARU
 }
 
 const Navbar = ({
@@ -21,6 +22,7 @@ const Navbar = ({
   onWhyChooseUsClick, // <-- BARU
   onBlogClick, // <-- BARU
   onContactClick,
+  onOurTeamsClick, // <-- BARU
 }: NavbarProps) => {
   
   // Helper untuk me-render link atau tombol
@@ -66,6 +68,7 @@ const Navbar = ({
           {renderNavLink("Why Us", "/why-us", onWhyChooseUsClick)} {/* <-- BARU */}
           {renderNavLink("About", "/about", onAboutClick)}
           {renderNavLink("Blog", "/blog", onBlogClick)} {/* <-- BARU */}
+          {renderNavLink("OurTeams", "/our-teams", onOurTeamsClick)} {/* <-- BARU */}
         </div>
 
         {/* Tombol Contact */}

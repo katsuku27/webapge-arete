@@ -1,8 +1,4 @@
-"use client";
-
-import { useState, useEffect, useCallback } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
+import { useState, useEffect } from "react";
 
 const blogpost = [
   {
@@ -10,25 +6,25 @@ const blogpost = [
     date: "10th Oct 2022",
     slides: [
       {
-        title: "How to position your furniture for positivity",
+        title: "Photo of a Lineup of Trucks (ready-to-operate fleet)",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla...",
+          "A reliable fleet, dependable service.With well-maintained and ready-to-operate vehicles, we ensure that every delivery is on time, safe, and efficient.Customer trust is our main motivation in maintaining operational quality on every trip.",
         image:
-          "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800",
+          "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763002705/arete/WhatsApp_Image_2025-11-12_at_20.52.47_xx0ftn.jpg",
       },
       {
-        title: "Creating harmony in your living space",
+      title: "Office Team Photo (togetherness)",
         description:
-          "Discover the secrets to arranging furniture that promotes positive energy and comfortable flow throughout your home...",
+          "Solid collaboration is the foundation of every big step.This moment of togetherness reflects our work ethic, professionalism, and commitment to continue providing the best logistics services to all customers.Together, we grow — stronger, more resilient, and better prepared to face future challenges.",
         image:
-          "https://images.unsplash.com/photo-1618219740975-d40978bb7378?q=80&w=800",
+          "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763002704/arete/WhatsApp_Image_2025-11-12_at_20.52.45_1_fw3em1.jpg",
       },
       {
-        title: "Feng Shui principles for modern homes",
+        title: "Night Truck Photo (night operations)",
         description:
-          "Learn how ancient wisdom can be applied to contemporary interior design for better balance and tranquility...",
+          "Unlimited dedication, even at night.Behind every successful logistics journey, there is a team and fleet that works tirelessly to ensure goods arrive on schedule.Arete Logistics is committed to providing reliable logistics solutions — anytime, anywhere.",
         image:
-          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=800",
+          "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763002703/arete/WhatsApp_Image_2025-11-12_at_20.52.44_ikzrv1.jpg",
       },
     ],
   },
@@ -37,25 +33,18 @@ const blogpost = [
     date: "15th Oct 2022",
     slides: [
       {
-        title: "Modern interior design trends for 2024",
+        title: "Happy Anniversary to All of Us!",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla...",
+          "Thank you for the hard work, laughter, and togetherness that have colored our journey.Every challenge we’ve overcome has made our team stronger Let’s continue to grow, support one another, and create more meaningful moments in the years ahead! 💙",
         image:
-          "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800",
+          "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763017981/arete/WhatsApp_Image_2025-11-13_at_14.12.07_wrk5va.jpg",
       },
       {
-        title: "Minimalist aesthetics taking over",
+        title: "Happy Company Anniversary!",
         description:
-          "Explore how less is more in contemporary design, with clean lines and functional beauty leading the way...",
+          "Each year brings new stories, challenges, and achievements.This journey wouldn’t be meaningful without the contribution and teamwork of every individual.May our shared spirit continue to shine, leading us toward greater success in the years to come",
         image:
-          "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800",
-      },
-      {
-        title: "Sustainable materials in focus",
-        description:
-          "Eco-friendly choices are becoming the norm, combining style with environmental consciousness...",
-        image:
-          "https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=800",
+          "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763003929/arete/WhatsApp_Image_2025-11-13_at_10.15.39_3_ctagvo.jpg",
       },
     ],
   },
@@ -64,264 +53,72 @@ const blogpost = [
     date: "20th Oct 2022",
     slides: [
       {
-        title: "Creating a cozy workspace at home",
+        title: "Head Office",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla...",
+          "Jl. Gading Kirana Timur IX No. 22 RT. 018 RW. 008, Kelapa Gading Barat, Kelapa Gading, Jakarta Utara, DKI Jakarta 14240",
         image:
-          "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800",
+          "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763009338/arete/6163cbc9123f1_fw71dn.png",
       },
       {
-        title: "Productivity boosting office setup",
+        title: "Garage",
         description:
-          "Design your workspace to maximize focus and efficiency with ergonomic furniture and smart layouts...",
+          "Jl. Cakung Cilincing Raya RT. 009 RW. 006,Cakung Barat, Cakung, Jakarta Timur, DKI Jakarta 13910",
         image:
-          "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800",
+          "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763009335/arete/6163cbc91231f1_kczmob.png",
       },
       {
-        title: "Work-life balance through design",
+        title: "Vehicle Facilities",
         description:
-          "Separate your professional and personal spaces effectively for better mental health and productivity...",
+          `5 Units Isuzu GVR 340 PTH size 40 Feet, 11 Units Hino 260 PTH size 40 Feet.`,
         image:
-          "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800",
+          "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763009336/arete/ada_xwwhwo.png",
       },
     ],
   },
 ];
 
-// const ImageCarousel = ({ images, slideTitles }: { images: string[]; slideTitles: string[] }) => {
-//   const [emblaRef, emblaApi] = useEmblaCarousel(
-//     { loop: true },
-//     [Autoplay({ delay: 3000, stopOnInteraction: false })]
-//   );
-
-//   const [selectedIndex, setSelectedIndex] = useState(0);
-
-//   const updateCurrentSlide = useCallback(() => {
-//     if (!emblaApi) return;
-//     setSelectedIndex(emblaApi.selectedScrollSnap());
-//   }, [emblaApi]);
-
-//   useEffect(() => {
-//     if (!emblaApi) return;
-
-//     emblaApi.on("select", updateCurrentSlide);
-//     updateCurrentSlide();
-
-//     return () => {
-//       emblaApi.off("select", updateCurrentSlide);
-//     };
-//   }, [emblaApi, updateCurrentSlide]);
-
-//   const scrollPrev = useCallback(() => {
-//     if (emblaApi) emblaApi.scrollPrev();
-//   }, [emblaApi]);
-
-//   const scrollNext = useCallback(() => {
-//     if (emblaApi) emblaApi.scrollNext();
-//   }, [emblaApi]);
-
-//   const scrollTo = useCallback((index: number) => {
-//     if (emblaApi) emblaApi.scrollTo(index);
-//   }, [emblaApi]);
-
-//   return (
-//     <div className="relative w-full h-56 overflow-hidden rounded-t-2xl group">
-//       <div className="embla w-full h-full" ref={emblaRef}>
-//         <div className="embla__container h-full flex">
-//           {images.map((src, index) => (
-//             <div className="embla__slide flex-[0_0_100%] min-w-0 relative" key={index}>
-//               <img
-//                 src={src}
-//                 alt={`Slide ${index + 1}`}
-//                 className="w-full h-full object-cover"
-//               />
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-
-//       <button
-//         onClick={scrollPrev}
-//         className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity z-10"
-//       >
-//         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-//         </svg>
-//       </button>
-
-//       <button
-//         onClick={scrollNext}
-//         className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity z-10"
-//       >
-//         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-//         </svg>
-//       </button>
-
-//       {/* Dots Indicator */}
-//       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-//         {images.map((_, index) => (
-//           <button
-//             key={index}
-//             onClick={() => scrollTo(index)}
-//             className={`w-2 h-2 rounded-full transition-all ${
-//               index === selectedIndex
-//                 ? 'bg-white w-6'
-//                 : 'bg-white/50 hover:bg-white/80'
-//             }`}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-const BlogCard = ({ post }: { post: (typeof blogpost)[0] }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 3000, stopOnInteraction: false }),
-  ]);
-
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const updateCurrentSlide = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    emblaApi.on("select", updateCurrentSlide);
-    updateCurrentSlide();
-
-    return () => {
-      emblaApi.off("select", updateCurrentSlide);
-    };
-  }, [emblaApi, updateCurrentSlide]);
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
-
-  const scrollTo = useCallback(
-    (index: number) => {
-      if (emblaApi) emblaApi.scrollTo(index);
-    },
-    [emblaApi]
-  );
-
-  const currentSlide = post.slides[selectedIndex];
-
-  return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-      {/* Image Carousel */}
-      <div className="relative w-full h-56 overflow-hidden rounded-t-2xl group">
-        <div className="embla w-full h-full" ref={emblaRef}>
-          <div className="embla__container h-full flex">
-            {post.slides.map((slide, index) => (
-              <div
-                className="embla__slide flex-[0_0_100%] min-w-0 relative"
-                key={index}
-              >
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <button
-          onClick={scrollPrev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity z-10"
-        >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-
-        <button
-          onClick={scrollNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity z-10"
-        >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
-
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-          {post.slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => scrollTo(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === selectedIndex
-                  ? "bg-white w-6"
-                  : "bg-white/50 hover:bg-white/80"
-              }`}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="p-6 overflow-hidden">
-        <div className="text-sm text-gray-500 mb-3">{post.date}</div>
-
-        <div className="relative h-16 mb-3 overflow-hidden">
-          <h3
-            key={selectedIndex}
-            className="text-xl font-bold text-gray-800 leading-tight animate-slide-left"
-          >
-            {currentSlide.title}
-          </h3>
-        </div>
-
-        <div className="relative h-20 overflow-hidden">
-          <p
-            key={`desc-${selectedIndex}`}
-            className="text-gray-600 text-sm leading-relaxed animate-slide-left-slow"
-          >
-            {currentSlide.description}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
+const allSlides = blogpost.flatMap(post => 
+  post.slides.map(slide => ({
+    ...slide,
+    date: post.date
+  }))
+);
 
 const BlogPost = () => {
+  const [currentGlobalIndex, setCurrentGlobalIndex] = useState(0);
+  const [showMore, setShowMore] = useState<{ [key: number]: boolean }>({});
+
+  // Auto rotate setiap 3 detik
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentGlobalIndex((prev) => (prev + 1) % allSlides.length);
+      setShowMore({});
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Hitung index untuk setiap card (offset dari currentGlobalIndex)
+  const getSlideForCard = (cardIndex: number) => {
+    const slideIndex = (currentGlobalIndex + cardIndex) % allSlides.length;
+    return allSlides[slideIndex];
+  };
+
+  const toggleShowMore = (cardIndex: number) => {
+    setShowMore(prev => ({
+      ...prev,
+      [cardIndex]: !prev[cardIndex]
+    }));
+  };
+
+  const MAX_LENGTH = 120;
+
   return (
-    <div className="w-full py-16 px-8 space-y-11">
+    <div className="w-full py-16 px-8">
       <style>{`
-        @keyframes slideLeft {
+        @keyframes slideInRight {
           from {
-            transform: translateX(100%);
+            transform: translateX(50px);
             opacity: 0;
           }
           to {
@@ -330,12 +127,8 @@ const BlogPost = () => {
           }
         }
         
-        .animate-slide-left {
-          animation: slideLeft 0.6s ease-out forwards;
-        }
-        
-        .animate-slide-left-slow {
-          animation: slideLeft 0.8s ease-out forwards;
+        .animate-slide {
+          animation: slideInRight 0.5s ease-out forwards;
         }
       `}</style>
 
@@ -355,9 +148,54 @@ const BlogPost = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogpost.map((post) => (
-            <BlogCard key={post.id} post={post} />
-          ))}
+          {[0, 1, 2].map((cardIndex) => {
+            const slide = getSlideForCard(cardIndex);
+            const isLongDescription = slide.description.length > MAX_LENGTH;
+            const isShowingMore = showMore[cardIndex] || false;
+            
+            const displayDescription = isShowingMore
+              ? slide.description
+              : slide.description.slice(0, MAX_LENGTH) + (isLongDescription ? "..." : "");
+
+            return (
+              <div 
+                key={`${currentGlobalIndex}-${cardIndex}`}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow animate-slide"
+              >
+                {/* Image */}
+                <div className="relative w-full h-56 overflow-hidden rounded-t-2xl">
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="text-sm text-gray-500 mb-3">
+                    {slide.date}
+                  </div>
+
+                  <h3 className="text-xl font-bold text-gray-800 leading-tight mb-3 min-h-[3.5rem]">
+                    {slide.title}
+                  </h3>
+
+                  <div className="text-gray-600 text-sm leading-relaxed">
+                    <p className="mb-2">{displayDescription}</p>
+                    {isLongDescription && (
+                      <button
+                        onClick={() => toggleShowMore(cardIndex)}
+                        className="text-blue-500 hover:text-blue-700 font-semibold text-sm transition-colors"
+                      >
+                        {isShowingMore ? "Show less" : "Show more"}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
