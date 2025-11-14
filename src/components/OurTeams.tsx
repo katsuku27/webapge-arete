@@ -5,8 +5,8 @@ const teamMembers = [
     id: 1,
     name: "Raharjo Marsetyo Prabowo",
     role: "Director of PT Arete Indonesia",
-    image: "https://minio.soedarpo.id:7443/websamudera-dev/2ef2e3956e7f0b8fbff43595d71797f8.png",
-    detailImage: "https://minio.soedarpo.id:7443/websamudera-dev/020f42e6809c9ea187e2d63e66ffda4f.png",
+    image: "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763092848/Gemini_Generated_Image_baiubfbaiubfbaiu_1_aabdwh.png ",
+    detailImage: "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763092477/pak_tio-removebg-preview_yhv7qr.png",
     details: {
       appointment: "Deed No. 58 dated 28 June 2023",
       birth: "Born in 1948, Indonesian Citizen",
@@ -48,7 +48,6 @@ const OurTeams = () => {
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
-        {/* Team Members - Centered with Flex */}
         <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
           {teamMembers.map((member) => (
             <div
@@ -56,7 +55,6 @@ const OurTeams = () => {
               onClick={() => setSelectedMember(member)}
               className="group cursor-pointer w-full sm:w-80 flex-shrink-0"
             >
-              {/* Image Container */}
               <div className="relative mb-6 overflow-hidden rounded-t-3xl bg-gradient-to-b from-blue-100 to-blue-50 h-80">
                 <div
                   className="absolute inset-0 bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-110"
@@ -67,7 +65,6 @@ const OurTeams = () => {
                 />
               </div>
 
-              {/* Info Box */}
               <div className="bg-white rounded-2xl shadow-lg p-6 -mt-8 mx-4 relative z-10 transition-all duration-300 group-hover:shadow-xl">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
                   {member.name}
@@ -82,7 +79,6 @@ const OurTeams = () => {
         </div>
       </div>
 
-      {/* Modal */}
       {selectedMember && (
         <div
           className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
@@ -92,7 +88,6 @@ const OurTeams = () => {
             className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col md:flex-row"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Modal Image */}
             <div className="md:w-2/5 bg-gradient-to-b from-blue-100 to-blue-50 relative">
               <div
                 className="w-full h-64 md:h-full bg-contain bg-center bg-no-repeat"
@@ -103,9 +98,7 @@ const OurTeams = () => {
               />
             </div>
 
-            {/* Modal Content */}
             <div className="md:w-3/5 flex flex-col">
-              {/* Header */}
               <div className="p-6 border-b border-gray-200">
                 <div className="flex justify-between items-start">
                   <div>
@@ -126,7 +119,6 @@ const OurTeams = () => {
                 <div className="w-16 h-1 bg-blue-600 mt-4"></div>
               </div>
 
-              {/* Body - Scrollable */}
               <div className="flex-1 overflow-y-auto p-6">
                 <div className="space-y-6">
                   <div>
