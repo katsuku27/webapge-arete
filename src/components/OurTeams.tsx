@@ -5,8 +5,8 @@ const teamMembers = [
     id: 1,
     name: "Raharjo Marsetyo Prabowo",
     role: "Director of PT Arete Indonesia",
-    image: "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763092848/Gemini_Generated_Image_baiubfbaiubfbaiu_1_aabdwh.png ",
-    detailImage: "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763092477/pak_tio-removebg-preview_yhv7qr.png",
+    image: "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763107694/Gemini_Generated_Image_baiubfbaiubfbaiu__1_-removebg-preview_nvybgy.png",
+    detailImage: "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763107694/Gemini_Generated_Image_baiubfbaiubfbaiu__1_-removebg-preview_nvybgy.png",
     details: {
       appointment: "Deed No. 58 dated 28 June 2023",
       birth: "Born in 1948, Indonesian Citizen",
