@@ -1,4 +1,4 @@
-"use client";
+  "use client";
 
 import ImageCarousel from "./ImageCarousel";
 import { ArrowRight, CirclePlay } from "lucide-react";
@@ -28,8 +28,6 @@ const Banner = ({
   ];
 
   const imageSrcs = carouselImages.map((image) => {
-    // Jika 'image' adalah string (URL), kembalikan apa adanya.
-    // Jika bukan (objek Warehouse), kembalikan properti 'src'-nya.
     return typeof image === "string" ? image : image.src;
   });
 
