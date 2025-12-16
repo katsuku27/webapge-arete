@@ -8,13 +8,11 @@ const teamMembers = [
     image: "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763107694/Gemini_Generated_Image_baiubfbaiubfbaiu__1_-removebg-preview_nvybgy.png",
     detailImage: "https://res.cloudinary.com/dbbzu2sxo/image/upload/v1763107694/Gemini_Generated_Image_baiubfbaiubfbaiu__1_-removebg-preview_nvybgy.png",
     details: {
-      appointment: "Deed No. 58 dated 28 June 2023",
-      birth: "Born in 1948, Indonesian Citizen",
-      education: "Diplom Ingenieur (Dipl.Ing.) from Technische Universitaet Muenchen (TUM), majoring in Electronics, specializing in Computer Science in 1974",
+      appointment: "--",
+      birth: "--",
+      education: "--",
       positions: [
-        "President Commissioner of PT Samudera Indonesia Tbk (2008–now)",
-        "President Commissioner of PT Samudera Indonesia Tangguh (2019–now)",
-        "Member of Nomination and Remuneration Committee of PT Samudera Indonesia Tbk (2018–now)"
+        "Manager of PT Arete Logistics)",
       ]
     }
   },
