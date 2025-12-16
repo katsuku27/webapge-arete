@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import Navbar from "@/components/Navbar";
@@ -11,6 +12,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import { useState, useRef } from "react";
 import VideoModal from "@/components/VideoModal";
 import OurTeams from "@/components/OurTeams";
+import LiveTracking from "@/components/LiveTracking";
 
 export default function Home() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -18,6 +20,7 @@ export default function Home() {
   const whyChooseUsRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const blogPostRef = useRef<HTMLDivElement>(null);
+  const liveTracking = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const ourTeamsRef = useRef<HTMLDivElement>(null);
 
@@ -38,6 +41,10 @@ export default function Home() {
     // <-- BARU
     blogPostRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+  const handleScrollToLiveTracking = () => {
+    // <-- BARU
+    liveTracking.current?.scrollIntoView({ behavior: "smooth" });
+  };
   const handleScrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -57,6 +64,7 @@ export default function Home() {
         onAboutClick={handleScrollToAbout}
         onBlogClick={handleScrollToBlogPost} // <-- BARU
         onContactClick={handleScrollToContact}
+        onLiveTrackingClick={handleScrollToLiveTracking} // <-- BARU
         onOurTeamsClick={handleScrollToOurTeams} // <-- BARU
       />
       <div className=" font-sans items-center bg-[#F5F5F5] space-y-24">
@@ -68,6 +76,9 @@ export default function Home() {
         </div>
         <div ref={servicesRef}>
           <Services />
+        </div>
+        <div ref={liveTracking}>
+          <LiveTracking />
         </div>
         <div ref={whyChooseUsRef}> {/* <-- BARU */}
           <WhyChooseUs />

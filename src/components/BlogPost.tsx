@@ -88,7 +88,6 @@ const BlogPost = () => {
   const [currentGlobalIndex, setCurrentGlobalIndex] = useState(0);
   const [showMore, setShowMore] = useState<{ [key: number]: boolean }>({});
 
-  // Auto rotate setiap 3 detik
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentGlobalIndex((prev) => (prev + 1) % allSlides.length);
@@ -98,7 +97,6 @@ const BlogPost = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Hitung index untuk setiap card (offset dari currentGlobalIndex)
   const getSlideForCard = (cardIndex: number) => {
     const slideIndex = (currentGlobalIndex + cardIndex) % allSlides.length;
     return allSlides[slideIndex];
