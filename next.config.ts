@@ -48,6 +48,9 @@ const nextConfig: NextConfig = {
     ],
     unoptimized: true,
   },
+  output: 'export',
+  trailingSlash: true,
+  basePath: '/qr',
 };
 
 export default nextConfig;

@@ -18,21 +18,6 @@ const teamMembers = [
       ]
     }
   },
-  {
-    id: 2,
-    name: "Teguh Pribadi",
-    role: "President Commissioner",
-    image: "https://minio.soedarpo.id:7443/websamudera-dev/4a59bd7b79d87e9fd70be5b5c4dc7e54.png",
-    detailImage: "https://minio.soedarpo.id:7443/websamudera-dev/4a59bd7b79d87e9fd70be5b5c4dc7e54.png",
-    details: {
-      appointment: "Deed No. 58 dated 28 June 2023",
-      birth: "Born in 1955, Indonesian Citizen",
-      education: "Bachelor of Economics",
-      positions: [
-        "Commissioner of PT Samudera Indonesia Tbk"
-      ]
-    }
-  }
 ];
 
 const OurTeams = () => {

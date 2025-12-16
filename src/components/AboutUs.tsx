@@ -19,7 +19,7 @@ const AboutUs = () => {
                 Growing Your Business Together
               </h2>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Established in 2010, we continue to innovate to provide the best
+                Established in 2021, we continue to innovate to provide the best
                 solutions for companies. Our mission is to help Indonesian
                 companies grow sustainably and compete in the international
                 market.
