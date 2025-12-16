@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
               your Trusted Logistics Partner
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              We leverage over 6 years of experience to be your trusted partner,
+              We leverage over 5 years of experience to be your trusted partner,
               specializing in integrated logistics—from forwarding and customs
               clearance to warehousing, container rental, and final delivery
               trucking.

@@ -88,7 +88,7 @@ const Banner = ({
             <div className="text-gray-600">Customer Satisfaction</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-blue-600">6+</div>
+            <div className="text-2xl font-bold text-blue-600">5+</div>
             <div className="text-gray-600">years of experience</div>
           </div>
         </div>
